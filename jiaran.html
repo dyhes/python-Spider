@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>二创随机播放器</title>
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jdquery/3.2.1/jdquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-size: cover;
+            user-select:none;
+            background-position: center 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -ms-background-size: cover;
+
+        }
+
+        video {
+            z-index: -1;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+        }
+        button{
+            margin: 1vw;
+
+        }
+
+        #myframe {
+            margin-top: 2vh;
+            width: 48vw;
+            height: 60vh;
+        }
+        h1{
+            margin: 1vh 0;
+            color: white;
+            font-family:'KaiTi';
+        }
+    </style>
+</head>
+
+<body onpageshow='check()'>
+    <video muted width=100% autoplay loop="loop"> 
+        <source src="./bg.mp4">
+        当前浏览器不支持视频播放.</video>
+        <div id='wrapper' class='container-fluid '>
+
+            <div class='row mg'>
+                <div class="col-sm-6 blank"></div>
+                <div class='col-sm'>
+                    <video class="dplayer-video dplayer-video-current" webkit-playsinline="" playsinline="" crossorigin="anonymous" preload="metadata" ppp-src="/202008/13/hIAF6kDF/index.m3u8" src="https://cdn.iboyplayer.com/df8b5318-5b34-4b4f-920d-818db81e380f">
+    
+                    </video>
+                    <!-- <iframe id="myframe" sandbox='allow-top-navigation allow-same-origin allow-forms allow-scripts'
+                        src="https://player.bilibili.com/player.html?bvid=BV1FX4y1g7u8&high_dquality=1&danmaku=1"
+                        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe> -->
+                </div>
+            </div>
+    
+            <div class='row pos'>
+                <div class="col-sm-6 blank"></div>
+                <div class='col-sm'>
+                    <h1>必看经典：</h1>
+                </div>
+            </div>
+    
+            <div class='row  pos'>
+                <div class="col-sm-6 blank"></div>
+                <div class='col-sm'>
+                    <button type="button" class='btn btn-primary ' onclick="myrand('BV1FX4y1g7u8')">猫中毒</button>
+                    <button type="button" class='btn btn-danger ' onclick="myrand('BV1kK4y1A7tN')">嘉然，我真的好喜欢你啊</button>
+                    <button type="button" class='btn btn-success ' onclick="myrand('')">快来随机你的二创吧</button>
+                </div>
+            </div>
+    
+    
+            <div class='row pos'>
+                <div class="col-sm-6 blank"></div>
+                <div class='col-sm'>
+                    <h1>友情链接：</h1>
+                </div>
+            </div>
+    
+            <div class='row pos'>
+                <div class="col-sm-6 blank"></div>
+                <div class='col-sm'>
+                    <button type="button" class='btn btn-primary ' onclick="myrand('BV1PN411X7QW')">红色高跟鞋</button>
+                    <button type="button" class='btn btn-danger ' onclick="myrand('BV1wg411G7bm')">霓虹甜心</button>
+                    <button type="button" class='btn btn-success' onclick="myrand('BV1wo4y1X7Tk')">ybb小火车</button>
+                </div>
+            </div>
+    <script src='./main.js'></script>
+</body>
+
+</html>
